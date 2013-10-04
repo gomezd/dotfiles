@@ -2,4 +2,4 @@
 
 basedir=`git rev-parse --show-cdup`;
 
-git status --porcelain -uno | awk '{if ($1 != "D") print $NF}' | grep \\.js(on)? | xargs -I {} jslint --color $basedir{};
+git status --porcelain -uno | awk '{if ($1 != "D") print $NF}' | grep \\.js | xargs -I {} jslint --color $basedir{};
